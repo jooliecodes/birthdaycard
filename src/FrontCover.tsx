@@ -73,9 +73,10 @@ export default function FrontCover() {
             <Typography variant="h6" sx={{ color: "white", textAlign: 'center', fontFamily: "'Press Start 2P', sans-serif", textShadow: "-2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black", fontSize: '10px', marginTop: '20px' }}>
               (Blow out the candle by blowing into the mic)
             </Typography>
+            <Grid2 size={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '23px' }}>
             <Canvas
-              style={{ width: "500px", height: "600px" }}
-              camera={{ position: [9, 8, Math.PI / 4], fov: 70 }}
+              style={{ width: "500px", height: "500px" }}
+              camera={{ position: [9, 8, Math.PI / 4], fov: 75 }}
             >
               <ambientLight />
               <pointLight position={[10, 10, 10]} />
@@ -83,6 +84,9 @@ export default function FrontCover() {
               <OrbitControls />
               <Environment preset="city" />
             </Canvas>
+
+            </Grid2>
+     
             <Box sx={{ position: "absolute", bottom: "20px", right: "20px" }}>
               <motion.img
                 src={arrow}
