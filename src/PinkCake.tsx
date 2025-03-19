@@ -42,7 +42,7 @@ export default function Model() {
           analyser.getByteFrequencyData(dataArray);
           const volume = dataArray.reduce((acc, val) => acc + val, 0) / dataArray.length;
   
-          if (volume > 85) {
+          if (volume > 60) {
             console.log("Blow detected! Extinguishing candle...");
             setIsCandleLit(false);
           }
