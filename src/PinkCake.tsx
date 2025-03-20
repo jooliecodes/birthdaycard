@@ -42,15 +42,15 @@ export default function Model() {
           analyser.getByteFrequencyData(dataArray);
           const volume = dataArray.reduce((acc, val) => acc + val, 0) / dataArray.length;
   
-          if (volume > 60) {
-            console.log("Blow detected! Extinguishing candle...");
+          if (volume > 70) {
+            // console.log('blow detected', volume);
             setIsCandleLit(false);
           }
   
           animationFrameId = requestAnimationFrame(detectBlow);
         };
   
-        detectBlow(); // Start mic detection
+        detectBlow(); 
   
         return () => {
           stream.getTracks().forEach((track) => track.stop());

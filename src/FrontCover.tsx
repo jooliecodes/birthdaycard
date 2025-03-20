@@ -55,7 +55,7 @@ export default function FrontCover() {
           <CardContent sx={{ padding: 0 }}>
             <Typography
               sx={{
-                fontSize: "2.6rem",
+                fontSize: "2.7rem",
                 textAlign: "center",
                 fontFamily: "'Press Start 2P', sans-serif",
                 color: "white",
@@ -67,16 +67,19 @@ export default function FrontCover() {
             >
               Happy Birthday Ashley
             </Typography>
-            <Typography variant="h5" sx={{ color: "white", textAlign: 'center', fontFamily: "'Press Start 2P', sans-serif", textShadow: "-2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black", fontSize: '14px', marginTop: '20px' }}>
+            <Typography variant="h1" sx={{ color: "yellow", textAlign: 'center', fontFamily: "'Press Start 2P', sans-serif", textShadow: "-2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black", fontSize: '16px', marginTop: '20px' }}>
               Make a wish!
             </Typography>
-            <Typography variant="h6" sx={{ color: "white", textAlign: 'center', fontFamily: "'Press Start 2P', sans-serif", textShadow: "-2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black", fontSize: '10px', marginTop: '20px' }}>
-              (Blow out the candle by blowing into the mic)
+            <Typography variant="h4" sx={{color: "hotpink", textAlign: 'center', fontFamily: "'Press Start 2P', sans-serif", textShadow: "-2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black", fontSize: '13px', marginTop: '20px' }}>
+              Blow out the candle by 
+            </Typography>
+            <Typography variant="h4" sx={{color: "hotpink", textAlign: 'center', fontFamily: "'Press Start 2P', sans-serif", textShadow: "-2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black", fontSize: '13px', marginTop: '20px' }}>
+              blowing into the mic
             </Typography>
             <Grid2 size={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '23px' }}>
             <Canvas
-              style={{ width: "500px", height: "500px" }}
-              camera={{ position: [9, 8, Math.PI / 4], fov: 75 }}
+              style={{ width: "500px", height: "400px" }}
+              camera={{ position: [9, 8, Math.PI / 4], fov: 66 }}
             >
               <ambientLight />
               <pointLight position={[10, 10, 10]} />

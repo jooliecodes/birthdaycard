@@ -98,14 +98,7 @@ export default function PageTwo() {
         }}
       >
         <CardContent>
-          <video
-            src={pubgVideo}
-            controls
-            muted
-            style={{ width: "100%", height: "400px" }}
-            onLoadedMetadata={(e) => e.currentTarget.volume = 0.2}
-          />
-          <video
+        <video
             src={cheers}
             autoPlay
             loop
@@ -113,6 +106,17 @@ export default function PageTwo() {
             style={{ width: "100%", height: "400px" }}
             onLoadedMetadata={(e) => e.currentTarget.volume = 0.2}
           />
+          <Typography variant="caption" sx={{  fontWeight: "bold" }}>
+            Remember this? :)
+          </Typography>
+          <video
+            src={pubgVideo}
+            controls
+            muted
+            style={{ width: "100%", height: "300px" }}
+            onLoadedMetadata={(e) => e.currentTarget.volume = 0.2}
+          />
+ 
         </CardContent>
 
       </Card>
