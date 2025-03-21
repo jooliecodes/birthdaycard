@@ -2,8 +2,8 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 import { useEffect, useRef, useState } from "react";
 
 export default function Model() {
-    const { scene, animations } = useGLTF("/birthdaycard/models/cakee.gltf");
-    const { actions } = useAnimations(animations, scene);
+  const { scene, animations } = useGLTF("/birthdaycard/models/cakee.gltf");
+  const { actions } = useAnimations(animations, scene);
   const [isCandleLit, setIsCandleLit] = useState(true);
   const analyserRef = useRef<AnalyserNode | null>(null);
 
@@ -42,8 +42,7 @@ export default function Model() {
           analyser.getByteFrequencyData(dataArray);
           const volume = dataArray.reduce((acc, val) => acc + val, 0) / dataArray.length;
   
-          if (volume > 70) {
-            // console.log('blow detected', volume);
+          if (volume > 75) {
             setIsCandleLit(false);
           }
   
@@ -70,8 +69,8 @@ export default function Model() {
     <group>
       <primitive object={scene} scale={3} />
       {isCandleLit && (
-        <mesh position={[0, 1.5, 0]}>
-          <pointLight intensity={2} color="orange" />
+        <mesh position={[0, 1, 0]}>
+          <pointLight intensity={1} color="orange" />
         </mesh>
       )}
     </group>

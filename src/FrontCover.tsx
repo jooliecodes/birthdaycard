@@ -78,10 +78,10 @@ export default function FrontCover() {
             </Typography>
             <Grid2 size={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '23px' }}>
             <Canvas
-              style={{ width: "500px", height: "400px" }}
-              camera={{ position: [9, 8, Math.PI / 4], fov: 66 }}
+              style={{ width: "600px", height: "400px" }}
+              camera={{ position: [9, 8, 0], fov: 60 }}
             >
-              <ambientLight />
+              <ambientLight intensity={.3} />
               <pointLight position={[10, 10, 10]} />
               <PinkCake />
               <OrbitControls />

@@ -6,6 +6,8 @@ import cheers from "./assets/cheers.mov";
 import { useNavigate } from "react-router-dom";
 import gc437 from "./assets/gc437.png";
 import { useState } from "react";
+import ashdrift from "./assets/ashdrift.mp4";
+import bestdriver from "./assets/bestdriver.mp4";
 
 export default function PageTwo() {
   const navigate = useNavigate();
@@ -69,57 +71,57 @@ export default function PageTwo() {
           </Typography>
 
           <Typography variant="caption" sx={{ fontSize: "1rem", color: "black" }}>
-            Also, I thought it would be cool to code a cute website for your bday, I hope you like it! :) Oh and I want to spoil you a little so click below to reveal the gift!!! 
+            Also, I thought it would be cool to code a cute website for your bday, I hope you like it! :) Oh and I want to spoil you a little so click below to reveal the gift!!!
           </Typography>
           {/* create a click to reveal number */}
           <Tooltip title="Click to reveal the gift" placement="top">
 
-          <Box
-            onClick={() => setBlurred(!blurred)}
-            sx={{
-              width: 250,
-              textAlign: "center",
-              cursor: "pointer",
-              transition: "filter 0.5s ease-in-out",
-              filter: blurred ? "blur(0px)" : "blur(8px)",
-              backgroundColor: "#f5f5f5",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              marginTop: '1rem',
-            }}
-          >
-            <img src={gc437} alt="giftcard" style={{ width: "100%", borderRadius: "18px",  }} />
-          </Box>
+            <Box
+              onClick={() => setBlurred(!blurred)}
+              sx={{
+                width: 250,
+                textAlign: "center",
+                cursor: "pointer",
+                transition: "filter 0.5s ease-in-out",
+                filter: blurred ? "blur(0px)" : "blur(8px)",
+                backgroundColor: "#f5f5f5",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                marginTop: '1rem',
+              }}
+            >
+              <img src={gc437} alt="giftcard" style={{ width: "100%", borderRadius: "18px", }} />
+            </Box>
           </Tooltip>
           <Tooltip title="Reveal the gift value" placement="top">
 
-          <Box
-            onClick={() => setShowPrice(!showPrice)}
-            sx={{
-              width: 200,
-              textAlign: "center",
-              cursor: "pointer",
-              transition: "filter 1s ease-in-out",
-              filter: showPrice ? "blur(0px)" : "blur(8px)",
-              backgroundColor: "#f5f5f5",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              marginTop: '1rem',
-            }}
-          >
-            <Stack direction="column" spacing={1} alignItems="center">
-          <Typography variant="h6" fontWeight="bold" fontSize={"12px"} sx={{ color: "black", }}>
-            $75 
-          </Typography>
-          <Typography variant="h6" fontWeight="bold" fontSize={"10px"} sx={{ color: "black", }}>
-          DM me for the code 
-          </Typography>
-       
-          </Stack>
-        
-          </Box>
+            <Box
+              onClick={() => setShowPrice(!showPrice)}
+              sx={{
+                width: 200,
+                textAlign: "center",
+                cursor: "pointer",
+                transition: "filter 1s ease-in-out",
+                filter: showPrice ? "blur(0px)" : "blur(8px)",
+                backgroundColor: "#f5f5f5",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                marginTop: '1rem',
+              }}
+            >
+              <Stack direction="column" spacing={1} alignItems="center">
+                <Typography variant="h6" fontWeight="bold" fontSize={"12px"} sx={{ color: "black", }}>
+                  $75
+                </Typography>
+                <Typography variant="h6" fontWeight="bold" fontSize={"10px"} sx={{ color: "black", }}>
+                  DM me for the code
+                </Typography>
+
+              </Stack>
+
+            </Box>
           </Tooltip>
         </CardContent>
 
@@ -154,25 +156,33 @@ export default function PageTwo() {
         }}
       >
         <CardContent>
-          <video
-            src={cheers}
-            autoPlay
-            loop
-            muted
-            style={{ width: "100%", height: "400px" }}
-            onLoadedMetadata={(e) => e.currentTarget.volume = 0.2}
-          />
-          <Typography variant="caption" sx={{ fontWeight: "bold" }}>
-            Remember this? :)
-          </Typography>
+        <Typography variant="h6" sx={{ fontSize: "1rem" }}>
+          pubg moments i could find hehe
+        </Typography>
           <video
             src={pubgVideo}
             controls
             muted
-            style={{ width: "100%", height: "300px" }}
+            style={{ width: "100%", height: "250px" }}
+            onLoadedMetadata={(e) => e.currentTarget.volume = 0.2}
+          />
+          <video
+            src={ashdrift}
+            controls
+            loop
+            muted
+            style={{ width: "100%", height: "250px" }}
             onLoadedMetadata={(e) => e.currentTarget.volume = 0.2}
           />
 
+        <video 
+        src={bestdriver}
+        controls
+        loop
+        muted
+        style={{ width: "100%", height: "250px" }}
+        onLoadedMetadata={(e) => e.currentTarget.volume = 0.2}
+        />
         </CardContent>
 
       </Card>
