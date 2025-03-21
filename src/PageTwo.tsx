@@ -162,26 +162,26 @@ export default function PageTwo() {
           <video
             src={pubgVideo}
             controls
-            muted
+            
             style={{ width: "100%", height: "250px" }}
-            onLoadedMetadata={(e) => e.currentTarget.volume = 0.2}
+            onLoadedMetadata={(e) => e.currentTarget.volume = 0.5}
           />
           <video
             src={ashdrift}
             controls
             loop
-            muted
+           
             style={{ width: "100%", height: "250px" }}
-            onLoadedMetadata={(e) => e.currentTarget.volume = 0.2}
+            onLoadedMetadata={(e) => e.currentTarget.volume = 0.5}
           />
 
         <video 
         src={bestdriver}
         controls
         loop
-        muted
+      
         style={{ width: "100%", height: "250px" }}
-        onLoadedMetadata={(e) => e.currentTarget.volume = 0.2}
+        onLoadedMetadata={(e) => e.currentTarget.volume = 0.5}
         />
         </CardContent>
 
